@@ -5,8 +5,10 @@ let code = prompt("Qual o código secreto?")
 console.log("Olá " + nome + " Seja Bem-Vindo!")
 console.log("Sua cidade é " + cidade + " Seja Bem-Vindo á xique-xique bahia")
 
-if (code = "7") {
+if (code == "7") {
     alert ("Parabéns!")
 } else {
     alert ("Você errou!")
 }
+
+console.log(nome + " errou o código secreto")
