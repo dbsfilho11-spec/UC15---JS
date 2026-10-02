@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Quiz.css">
+    <title>Quiz de filmes | Cine Lumière</title>
+</head>
+<body>
+    <nav class="container">
+        <h1>Cine Lumière</h1>
+        <a href="Index.html">Início</a>
+    </nav>
+
+    <main class="quiz-container">
+        <p class="eyebrow">SUA PRÓXIMA SESSÃO</p>
+        <h1 id="Pergunta">Qual seu estilo de filme?</h1>
+        <p id="descricao" class="description">Responda rapidinho e descubra o clima de filme ideal para hoje.</p>
+        <p id="progresso" class="progress" aria-live="polite">Pergunta 1 de 5</p>
+        <div id="opcoes" class="options" aria-label="Opções de resposta"></div>
+        <div id="resultado" class="result" aria-live="polite" hidden></div>
+        <button id="reiniciar" class="restart-button" type="button" hidden>Refazer quiz</button>
+    </main>
+
+    <script src="Quiz.js"></script>
+</body>
+</html>

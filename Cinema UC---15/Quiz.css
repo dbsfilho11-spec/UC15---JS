@@ -1,0 +1,275 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0b0b0b;
+    color: white;
+    overflow-x: hidden;
+}
+
+
+.container {
+    width: 100%;
+    min-height: 80px;
+
+    background-color: #171717;
+
+    display: flex;
+    align-items: center;
+
+    gap: 30px;
+    padding: 15px 40px;
+
+    border-bottom: 2px solid #d4af37;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container h1 {
+    color: #d4af37;
+    font-size: 30px;
+    font-weight: bold;
+
+    margin-right: auto;
+    white-space: nowrap;
+}
+
+.container a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+.container a:hover {
+    color: #d4af37;
+}
+
+
+
+.container input {
+    width: 240px;
+
+    padding: 12px 18px;
+
+    background-color: #242424;
+
+    border: 1px solid #444;
+    border-radius: 25px;
+
+    color: white;
+
+    outline: none;
+
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+.container input::placeholder {
+    color: #999;
+}
+
+.container input:focus {
+    border-color: #d4af37;
+
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.25);
+}
+
+
+.quiz-container {
+    width: min(760px, calc(100% - 32px));
+    margin: 72px auto;
+    padding: 44px;
+    text-align: center;
+    background: linear-gradient(145deg, #1d1d1d, #121212);
+    border: 1px solid #343434;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.eyebrow {
+    margin-bottom: 14px;
+    color: #d4af37;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+#Pergunta {
+    color: #f4d675;
+    font-size: clamp(26px, 5vw, 38px);
+}
+
+.description {
+    margin: 14px auto 24px;
+    color: #c3c3c3;
+    line-height: 1.6;
+}
+
+.progress {
+    margin-bottom: 16px;
+    color: #a5a5a5;
+    font-size: 14px;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.box {
+    min-height: 62px;
+    padding: 16px;
+    color: white;
+    font: inherit;
+    text-align: center;
+    background-color: #292929;
+    border: 1px solid #454545;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.box:hover,
+.box:focus-visible {
+    color: #f4d675;
+    background-color: #363125;
+    border-color: #d4af37;
+    transform: translateY(-2px);
+    outline: none;
+}
+
+.result {
+    padding: 22px;
+    color: #f4d675;
+    line-height: 1.8;
+    background-color: #292929;
+    border: 1px solid #d4af37;
+    border-radius: 12px;
+}
+
+.recommendation-card {
+    display: flex;
+    overflow: hidden;
+    color: white;
+    text-align: left;
+    background-color: #1b1b1b;
+    border-radius: 12px;
+}
+
+.recommendation-card img {
+    width: 150px;
+    min-height: 190px;
+    object-fit: cover;
+}
+
+.recommendation-details {
+    padding: 20px;
+}
+
+.recommendation-category {
+    color: #d4af37;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.recommendation-details h2 {
+    margin: 6px 0 10px;
+    font-size: 23px;
+}
+
+.recommendation-details a,
+.alternatives-list a {
+    display: inline-block;
+    margin-top: 14px;
+    color: #f4d675;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.recommendation-details a:hover,
+.alternatives-list a:hover {
+    text-decoration: underline;
+}
+
+.alternatives-title {
+    margin: 20px 0 6px;
+    color: white;
+    font-size: 16px;
+}
+
+.alternatives-list {
+    padding: 0;
+    list-style: none;
+}
+
+.alternatives-list a {
+    margin-top: 6px;
+}
+
+.restart-button {
+    margin-top: 20px;
+    padding: 12px 22px;
+    color: #151515;
+    font: inherit;
+    font-weight: bold;
+    background-color: #d4af37;
+    border: 0;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.restart-button:hover,
+.restart-button:focus-visible {
+    background-color: #f4d675;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 560px) {
+    .container {
+        gap: 16px;
+        padding: 14px 20px;
+    }
+
+    .container h1 {
+        font-size: 23px;
+    }
+
+    .quiz-container {
+        margin: 36px auto;
+        padding: 30px 20px;
+    }
+
+    .options {
+        grid-template-columns: 1fr;
+    }
+
+    .recommendation-card {
+        display: block;
+    }
+
+    .recommendation-card img {
+        width: 100%;
+        height: 230px;
+    }
+}
